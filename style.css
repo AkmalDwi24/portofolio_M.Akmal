@@ -11,6 +11,7 @@
 body{
     background-color: #f7f7f2;
     color: #1e1e24;
+    overflow-x: hidden;
 }
 
 header {
@@ -158,4 +159,80 @@ header {
     font-weight: 600;
     display: flex;
     align-items: center;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 10px;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+
+    .home-text h2 {
+        font-size: 2rem;
+    }
+
+    .home-text h3 {
+        font-size: 1.2rem;
+        padding-left: 3rem;
+    }
+
+    .home-text h3::before {
+        width: 50px;
+        top: 0.8rem;
+    }
+
+    .home-img img {
+        max-width: 250px;
+    }
+
+    .socials-icons {
+        position: static;
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .socials-icons i {
+        margin: 0 10px;
+    }
+
+    .scroll-btn {
+        position: static;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-text h3 {
+        font-size: 1rem;
+        padding-left: 2rem;
+    }
+
+    .home-text h3::before {
+        width: 30px;
+        top: 0.7rem;
+    }
+
+    .btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
 }
