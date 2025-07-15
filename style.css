@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: #f7f7f2;
+    color: #1e1e24;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e1e24;
+    text-decoration: none;
+}
+
+
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.navbar a {
+    position: relative;
+    color: #1e1e24;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-bottom: 6px;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #00bcd4;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00bcd4;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a.active {
+    color: #00bcd4;
+    font-weight: 600;
+}
+
+.navbar a.active::after {
+    width: 100%;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 2rem 5rem 0 19rem;
+    gap: 1rem;
+}
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;   
+    max-height: 400px;   
+    object-fit: cover;   
+    border-radius: 0.5rem;
+}
+.home-text h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.home-text h3{
+    position: relative;
+    padding-left: 6rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.home-text h3::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #1e1e24;
+    left: 0;
+    top: 1rem;
+}
+.home-text p{
+    margin-bottom: 2rem;
+}
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #f7f7f2;
+    border: 1px solid #1e1e24;
+    background: #1e1e24;
+    transition: all 0.5s;
+}
+.btn:hover{
+    background: #f7f7f2;
+    color: #1e1e24;
+    transform: translateY(-5px);
+}
+.socials-icons{
+    position: absolute;
+    top: 40%;
+    padding: 0 8rem;
+}
+.socials-icons i{
+    display: block;
+    margin: 25px 0;
+    color: #1e1e24;
+    font-size: 1.5rem;
+    transition: all 0.6s;
+}
+.socials-icons i:hover{
+    transform: rotate3d(0, 0, 1, 90deg);
+}
+.scroll-btn{
+    position: absolute;
+    bottom: 7%;
+    left: 9%;
+}
+.scroll-btn{
+    color: #1e1e24;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
